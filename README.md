@@ -1,10 +1,10 @@
 # Slayers-RPG-Engine-Java v1.0
-Création d'un moteur de jeu RPG inspiré du jeu vidéo Slayers Online (mais en offline pour le moment, il n'est pas en ligne)  
+Création d'un moteur de jeu 2D RPG inspiré du jeu vidéo Slayers Online (mais en offline pour le moment, il n'est pas en ligne)  
 Le moteur est entièrement conçu et codé en Java/awt from scratch (de 0) par Metroidzeta (Alain Barbier).  
 
 ## POUR COMPILER LE PROGRAMME
 
-Sous Windows, à partir du dossier racine :
+Sous Windows, à partir du dossier racine :  
 ```javac -cp "libs/*" -d bin src/core/*.java src/core/ressources/*.java src/core/events/*.java```  
 Puis exécuter :  
 ```java -cp "bin;libs/*" core.Config```  
