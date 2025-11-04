@@ -40,7 +40,7 @@ Vous ne pouvez pas publier, redistribuer ni utiliser ce code dans un cadre comme
 
 Les ressources graphiques, musicales et sonores appartiennent à leurs auteurs respectifs et ne sont pas couvertes par cette licence.
 
-👉 Voir le fichier complet [LICENSE.md](https://github.com/Metroidzeta/Slayers-RPG-Engine-Java/blob/main/README.md) pour les termes détaillés (versions française et anglaise).
+👉 Voir le fichier complet [LICENSE.md](https://github.com/Metroidzeta/Slayers-RPG-Engine-Java/blob/main/LICENSE.md) pour les termes détaillés (versions française et anglaise).
 
 📧 Contact : [Alain1293@outlook.fr](mailto:Alain1293@outlook.fr)
 
