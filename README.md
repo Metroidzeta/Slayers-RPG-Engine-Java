@@ -30,7 +30,7 @@ Puis exécuter :
 
 Depuis la racine du projet, exécuter le fichier ```java -cp "bin;libs/*" core.Config```
 
-📜 Licence
+## 📜 LICENCE
 
 Ce projet est distribué sous la Licence d’Utilisation Personnelle et Éducative (Educational and Personal Use License).
 
@@ -40,7 +40,7 @@ Vous ne pouvez pas publier, redistribuer ni utiliser ce code dans un cadre comme
 
 Les ressources graphiques, musicales et sonores appartiennent à leurs auteurs respectifs et ne sont pas couvertes par cette licence.
 
-👉 Voir le fichier complet LICENSE.md pour les termes détaillés (versions française et anglaise).
+👉 Voir le fichier complet [LICENSE.md](https://github.com/Metroidzeta/Slayers-RPG-Engine-Java/blob/main/README.md) pour les termes détaillés (versions française et anglaise).
 
 📧 Contact : [Alain1293@outlook.fr](mailto:Alain1293@outlook.fr)
 
