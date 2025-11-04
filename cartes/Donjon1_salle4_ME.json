@@ -25,7 +25,7 @@
           "msg": "Metroidzeta : Malheureusement l'aventure s'arrête ici."
         },
         {
-          "msg": "Metroidzeta : Le jeu est entièrement codé en C avec la bibliothèque SDL2, rien à voir avec RPG Maker."
+          "msg": "Metroidzeta : Le jeu est entièrement codé en Java avec la bibliothèque awt, rien à voir avec RPG Maker."
         },
         {
           "msg": "Metroidzeta : Est-ce que ça te plaît ? Tu peux participer au projet si tu le souhaites ;)"

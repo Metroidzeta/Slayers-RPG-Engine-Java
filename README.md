@@ -9,8 +9,8 @@ Sous Windows, à partir du dossier racine :
 Puis exécuter :  
 ```java -cp "bin;libs/*" core.Config```  
 
-![Slayers-Online-Remaster-screen-1](https://raw.githubusercontent.com/Metroidzeta/SO-Remaster/refs/heads/main/captures/Slayers-Online-remaster-v14-screen-1.png)
-![Slayers-Online-Remaster-screen-2](https://raw.githubusercontent.com/Metroidzeta/SO-Remaster/refs/heads/main/captures/Slayers-Online-remaster-v14-screen-2.png)
+![Slayers-RPG-Engine-Java-screen-1](https://raw.githubusercontent.com/Metroidzeta/SO-Remaster/refs/heads/main/captures/Slayers_RPG_Enigne_Java_Arene_Hunter.png)
+![Slayers-RPG-Engine-Java-screen-2](https://raw.githubusercontent.com/Metroidzeta/SO-Remaster/refs/heads/main/captures/Slayers_RPG_Enigne_Java_Premier_Donjon.png)
 
 ## 🎮 CONTRÔLES
 
