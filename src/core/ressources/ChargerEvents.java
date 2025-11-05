@@ -81,41 +81,58 @@ public final class ChargerEvents {
 
 				for (JsonElement evElem : arr) {
 					JsonObject ev = evElem.getAsJsonObject();
-
-					if (ev.has("msg")) {
-						String msg = ev.get("msg").getAsString();
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_MSG(msg)));
+					if (!ev.has("type")) {
+						System.err.println("[ERREUR] Événement sans type ignoré (" + chemin.getFileName() + " [" + xCase + "," + yCase + "])");
+						continue;
 					}
 
-					else if (ev.has("tp")) {
-						JsonObject tp = ev.getAsJsonObject("tp");
-						int xCaseDst = tp.get("xDst").getAsInt();
-						int yCaseDst = tp.get("yDst").getAsInt();
-						String nomCarteDst = tp.get("carteDst").getAsString();
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_TP(xCaseDst, yCaseDst, jeu.getCarte(nomCarteDst))));
-					}
-
-					else if (ev.has("musique")) {
-						String nomMusique = ev.get("musique").getAsString();
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_JM(jeu.getMusique(nomMusique))));
-					}
-
-					else if (ev.has("arretMusique")) {
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_AM()));
-					}
-
-					else if (ev.has("PV")) {
-						int val = ev.get("PV").getAsInt();
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_ModifPV(val)));
-					}
-
-					else if (ev.has("PM")) {
-						int val = ev.get("PM").getAsInt();
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_ModifPM(val)));
-					}
-
-					else if (ev.has("LVLUP")) {
-						events.add(new EventData(nomCarte, xCase, yCase, new Event_LVLUP()));
+					String type = ev.get("type").getAsString();
+					switch (type) {
+						case "MSG" -> {
+							if (!ev.has("texte")) {
+								System.err.println("[AVERTISSEMENT] MSG sans texte ignoré dans " + chemin.getFileName());
+								continue;
+							}
+							String texte = ev.get("texte").getAsString();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_MSG(texte)));
+						}
+						case "TP" -> {
+							if (!ev.has("xDst") || !ev.has("yDst") || !ev.has("carteDst")) {
+								System.err.println("[AVERTISSEMENT] TP incomplet ignoré dans " + chemin.getFileName());
+								continue;
+							}
+							int xDst = ev.get("xDst").getAsInt();
+							int yDst = ev.get("yDst").getAsInt();
+							String carteDst = ev.get("carteDst").getAsString();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_TP(xDst, yDst, jeu.getCarte(carteDst))));
+						}
+						case "JouerMusique" -> {
+							if (!ev.has("nom")) {
+								System.err.println("[AVERTISSEMENT] JouerMusique sans nom de musique ignoré dans " + chemin.getFileName());
+								continue;
+							}
+							String nomMusique = ev.get("nom").getAsString();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_JM(jeu.getMusique(nomMusique))));
+						}
+						case "ArretMusique" -> events.add(new EventData(nomCarte, xCase, yCase, new Event_AM()));
+						case "PV" -> {
+							if (!ev.has("valeur")) {
+								System.err.println("[AVERTISSEMENT] modif PV sans valeur ignoré dans " + chemin.getFileName());
+								continue;
+							}
+							int val = ev.get("valeur").getAsInt();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_ModifPV(val)));
+						}
+						case "PM" -> {
+							if (!ev.has("valeur")) {
+								System.err.println("[AVERTISSEMENT] modif PM sans valeur ignoré dans " + chemin.getFileName());
+								continue;
+							}
+							int val = ev.get("valeur").getAsInt();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_ModifPM(val)));
+						}
+						case "LVLUP" -> events.add(new EventData(nomCarte, xCase, yCase, new Event_LVLUP()));
+						default -> System.err.println("[AVERTISSEMENT] Type inconnu \"" + type + "\" ignoré dans " + chemin.getFileName());
 					}
 				}
 			}

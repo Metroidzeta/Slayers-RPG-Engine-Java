@@ -19,11 +19,7 @@
       "y": 3,
       "events": [
         {
-          "tp": {
-            "xDst": 9,
-            "yDst": 20,
-            "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
-          }
+          "type": "TP", "xDst": 9, "yDst": 20, "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
         }
       ]
     },
@@ -32,11 +28,7 @@
       "y": 3,
       "events": [
         {
-          "tp": {
-            "xDst": 9,
-            "yDst": 20,
-            "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
-          }
+          "type": "TP", "xDst": 9, "yDst": 20, "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
         }
       ]
     },
@@ -45,11 +37,7 @@
       "y": 3,
       "events": [
         {
-          "tp": {
-            "xDst": 9,
-            "yDst": 20,
-            "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
-          }
+          "type": "TP", "xDst": 9, "yDst": 20, "carteDst": "Chateau_Roland_Salle_Trone_Nouveau"
         }
       ]
     },
@@ -58,11 +46,7 @@
       "y": 10,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 1, "yDst": 9, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     },
@@ -71,11 +55,7 @@
       "y": 10,
       "events": [
         {
-          "tp": {
-            "xDst": 25,
-            "yDst": 22,
-            "carteDst": "Chateau_Roland_Exterieur"
-          }
+          "type": "TP", "xDst": 25, "yDst": 22, "carteDst": "Chateau_Roland_Exterieur"
         }
       ]
     },
@@ -84,11 +64,7 @@
       "y": 10,
       "events": [
         {
-          "tp": {
-            "xDst": 13,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 13, "yDst": 9, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     }

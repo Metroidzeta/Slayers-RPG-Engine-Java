@@ -57,11 +57,7 @@
       "y": 0,
       "events": [
         {
-          "tp": {
-            "xDst": 11,
-            "yDst": 38,
-            "carteDst": "Coacville_Donjon_Exterieur"
-          }
+          "type": "TP", "xDst": 11, "yDst": 38, "carteDst": "Coacville_Donjon_Exterieur"
         }
       ]
     },
@@ -70,11 +66,7 @@
       "y": 49,
       "events": [
         {
-          "tp": {
-            "xDst": 18,
-            "yDst": 1,
-            "carteDst": "Coacville"
-          }
+          "type": "TP", "xDst": 18, "yDst": 1, "carteDst": "Coacville"
         }
       ]
     }

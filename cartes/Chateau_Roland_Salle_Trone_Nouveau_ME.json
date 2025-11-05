@@ -30,11 +30,7 @@
       "y": 21,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 4,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 7, "yDst": 4, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -43,11 +39,7 @@
       "y": 21,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 4,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 7, "yDst": 4, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -56,11 +48,7 @@
       "y": 21,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 4,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 7, "yDst": 4, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -69,7 +57,7 @@
       "y": 6,
       "events": [
         {
-          "LVLUP": ""
+          "type": "LVLUP"
         }
       ]
     }

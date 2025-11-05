@@ -47,11 +47,7 @@
       "y": 0,
       "events": [
         {
-          "tp": {
-            "xDst": 16,
-            "yDst": 38,
-            "carteDst": "Coacville"
-          }
+          "type": "TP", "xDst": 16, "yDst": 38, "carteDst": "Coacville"
         }
       ]
     },
@@ -60,11 +56,7 @@
       "y": 39,
       "events": [
         {
-          "tp": {
-            "xDst": 8,
-            "yDst": 6,
-            "carteDst": "Coacville_Marais_Sud"
-          }
+          "type": "TP", "xDst": 8, "yDst": 6, "carteDst": "Coacville_Marais_Sud"
         }
       ]
     }

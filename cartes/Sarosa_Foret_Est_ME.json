@@ -37,11 +37,7 @@
       "y": 13,
       "events": [
         {
-          "tp": {
-            "xDst": 48,
-            "yDst": 27,
-            "carteDst": "Sarosa"
-          }
+          "type": "TP", "xDst": 48, "yDst": 27, "carteDst": "Sarosa"
         }
       ]
     },
@@ -50,11 +46,7 @@
       "y": 29,
       "events": [
         {
-          "tp": {
-            "xDst": 19,
-            "yDst": 1,
-            "carteDst": "Marais_Coacville"
-          }
+          "type": "TP", "xDst": 19, "yDst": 1, "carteDst": "Marais_Coacville"
         }
       ]
     }

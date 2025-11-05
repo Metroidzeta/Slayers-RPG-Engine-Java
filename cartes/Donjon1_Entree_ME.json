@@ -22,11 +22,7 @@
       "y": 3,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 13,
-            "carteDst": "Donjon1_salle5"
-          }
+          "type": "TP", "xDst": 7, "yDst": 13, "carteDst": "Donjon1_salle5"
         }
       ]
     },
@@ -35,11 +31,7 @@
       "y": 14,
       "events": [
         {
-          "tp": {
-            "xDst": 11,
-            "yDst": 6,
-            "carteDst": "Coacville_Donjon_Exterieur"
-          }
+          "type": "TP", "xDst": 11, "yDst": 6, "carteDst": "Coacville_Donjon_Exterieur"
         }
       ]
     },
@@ -48,11 +40,7 @@
       "y": 14,
       "events": [
         {
-          "tp": {
-            "xDst": 11,
-            "yDst": 6,
-            "carteDst": "Coacville_Donjon_Exterieur"
-          }
+          "type": "TP", "xDst": 11, "yDst": 6, "carteDst": "Coacville_Donjon_Exterieur"
         }
       ]
     },
@@ -61,11 +49,7 @@
       "y": 14,
       "events": [
         {
-          "tp": {
-            "xDst": 11,
-            "yDst": 6,
-            "carteDst": "Coacville_Donjon_Exterieur"
-          }
+          "type": "TP", "xDst": 11, "yDst": 6, "carteDst": "Coacville_Donjon_Exterieur"
         }
       ]
     }

@@ -47,11 +47,7 @@
       "y": 5,
       "events": [
         {
-          "tp": {
-            "xDst": 9,
-            "yDst": 13,
-            "carteDst": "Donjon1_Entree"
-          }
+          "type": "TP", "xDst": 9, "yDst": 13, "carteDst": "Donjon1_Entree"
         }
       ]
     },
@@ -60,11 +56,7 @@
       "y": 9,
       "events": [
         {
-          "tp": {
-            "xDst": 18,
-            "yDst": 9,
-            "carteDst": "carte18"
-          }
+          "type": "TP", "xDst": 18, "yDst": 9, "carteDst": "carte18"
         }
       ]
     },
@@ -73,11 +65,7 @@
       "y": 39,
       "events": [
         {
-          "tp": {
-            "xDst": 20,
-            "yDst": 1,
-            "carteDst": "Coacville_Marecage_Nord"
-          }
+          "type": "TP", "xDst": 20, "yDst": 1, "carteDst": "Coacville_Marecage_Nord"
         }
       ]
     }

@@ -29,11 +29,7 @@
       "y": 20,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 7,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 1, "yDst": 7, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     },
@@ -42,11 +38,7 @@
       "y": 20,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 7,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 1, "yDst": 7, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     },
@@ -55,11 +47,7 @@
       "y": 20,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 7,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 1, "yDst": 7, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     }

@@ -27,11 +27,7 @@
       "y": 4,
       "events": [
         {
-          "tp": {
-            "xDst": 25,
-            "yDst": 5,
-            "carteDst": "Chateau_Roland_Exterieur"
-          }
+          "type": "TP", "xDst": 25, "yDst": 5, "carteDst": "Chateau_Roland_Exterieur"
         }
       ]
     },
@@ -40,11 +36,7 @@
       "y": 7,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 1, "yDst": 9, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -53,11 +45,7 @@
       "y": 7,
       "events": [
         {
-          "tp": {
-            "xDst": 13,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 13, "yDst": 9, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -66,11 +54,7 @@
       "y": 8,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 1, "yDst": 9, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -79,11 +63,7 @@
       "y": 8,
       "events": [
         {
-          "tp": {
-            "xDst": 13,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 13, "yDst": 9, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -92,11 +72,7 @@
       "y": 13,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 17,
-            "carteDst": "Arene_Hunter"
-          }
+          "type": "TP", "xDst": 1, "yDst": 17, "carteDst": "Arene_Hunter"
         }
       ]
     },
@@ -105,11 +81,7 @@
       "y": 14,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 17,
-            "carteDst": "Arene_Hunter"
-          }
+          "type": "TP", "xDst": 1, "yDst": 17, "carteDst": "Arene_Hunter"
         }
       ]
     },
@@ -118,11 +90,7 @@
       "y": 19,
       "events": [
         {
-          "tp": {
-            "xDst": 25,
-            "yDst": 32,
-            "carteDst": "Chateau_Roland_Exterieur"
-          }
+          "type": "TP", "xDst": 25, "yDst": 32, "carteDst": "Chateau_Roland_Exterieur"
         }
       ]
     }

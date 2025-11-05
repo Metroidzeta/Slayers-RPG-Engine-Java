@@ -42,11 +42,7 @@
       "y": 6,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 5,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 7, "yDst": 5, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     },
@@ -55,11 +51,7 @@
       "y": 21,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 9,
-            "carteDst": "Chateau_Roland_Etage_01"
-          }
+          "type": "TP", "xDst": 7, "yDst": 9, "carteDst": "Chateau_Roland_Etage_01"
         }
       ]
     },
@@ -68,11 +60,7 @@
       "y": 31,
       "events": [
         {
-          "tp": {
-            "xDst": 7,
-            "yDst": 18,
-            "carteDst": "Chateau_Roland_Cour_Interieure"
-          }
+          "type": "TP", "xDst": 7, "yDst": 18, "carteDst": "Chateau_Roland_Cour_Interieure"
         }
       ]
     },
@@ -81,11 +69,7 @@
       "y": 34,
       "events": [
         {
-          "tp": {
-            "xDst": 23,
-            "yDst": 1,
-            "carteDst": "Sarosa"
-          }
+          "type": "TP", "xDst": 23, "yDst": 1, "carteDst": "Sarosa"
         }
       ]
     }

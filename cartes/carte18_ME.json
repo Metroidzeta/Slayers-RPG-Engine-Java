@@ -27,11 +27,7 @@
       "y": 9,
       "events": [
         {
-          "tp": {
-            "xDst": 27,
-            "yDst": 17,
-            "carteDst": "Arene_Hunter"
-          }
+          "type": "TP", "xDst": 27, "yDst": 17, "carteDst": "Arene_Hunter"
         }
       ]
     },
@@ -40,11 +36,7 @@
       "y": 9,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 9,
-            "carteDst": "Coacville_Donjon_Exterieur"
-          }
+          "type": "TP", "xDst": 1, "yDst": 9, "carteDst": "Coacville_Donjon_Exterieur"
         }
       ]
     }

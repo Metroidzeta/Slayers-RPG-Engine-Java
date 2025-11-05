@@ -57,11 +57,7 @@
       "y": 0,
       "events": [
         {
-          "tp": {
-            "xDst": 25,
-            "yDst": 33,
-            "carteDst": "Chateau_Roland_Exterieur"
-          }
+          "type": "TP", "xDst": 25, "yDst": 33, "carteDst": "Chateau_Roland_Exterieur"
         }
       ]
     },
@@ -70,7 +66,7 @@
       "y": 10,
       "events": [
         {
-          "msg": "Les coups critiques sont affichés en rouge et infligent 200% de ton attaque de base."
+          "type": "MSG", "texte": "Les coups critiques sont affichés en rouge et infligent 200% de ton attaque de base."
         }
       ]
     },
@@ -79,11 +75,7 @@
       "y": 15,
       "events": [
         {
-          "tp": {
-            "xDst": 8,
-            "yDst": 4,
-            "carteDst": "Sarosa_Milice_Accueil"
-          }
+          "type": "TP", "xDst": 8, "yDst": 4, "carteDst": "Sarosa_Milice_Accueil"
         }
       ]
     },
@@ -92,22 +84,22 @@
       "y": 17,
       "events": [
         {
-          "msg": "La musique \"Hunter\" sera joué après ce message"
+          "type": "MSG", "texte": "La musique \"Hunter\" sera joué après ce message"
         },
         {
-          "musique": "hunter.ogg"
+          "type": "JouerMusique", "nom": "hunter.ogg"
         },
         {
-          "msg": "Arrêt de la musique \"Hunter\" après ce message"
+          "type": "MSG", "texte": "Arrêt de la musique \"Hunter\" après ce message"
         },
         {
-          "arretMusique": ""
+          "type": "ArretMusique"
         },
         {
-          "msg": "On remet la musique de \"Sarosa\" après ce message"
+          "type": "MSG", "texte": "On remet la musique de \"Sarosa\" après ce message"
         },
         {
-          "musique": "Sarosa.ogg"
+          "type": "JouerMusique", "nom": "Sarosa.ogg"
         }
       ]
     },
@@ -116,11 +108,7 @@
       "y": 27,
       "events": [
         {
-          "tp": {
-            "xDst": 1,
-            "yDst": 13,
-            "carteDst": "Sarosa_Foret_Est"
-          }
+          "type": "TP", "xDst": 1, "yDst": 13, "carteDst": "Sarosa_Foret_Est"
         }
       ]
     },
@@ -129,11 +117,7 @@
       "y": 49,
       "events": [
         {
-          "tp": {
-            "xDst": 28,
-            "yDst": 1,
-            "carteDst": "Foret_Sud_Sarosa"
-          }
+          "type": "TP", "xDst": 28, "yDst": 1, "carteDst": "Foret_Sud_Sarosa"
         }
       ]
     }
