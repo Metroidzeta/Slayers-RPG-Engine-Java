@@ -26,7 +26,7 @@ public final class Event_AM extends Event {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof Event_AM ev_tp)) return false;
+		if (!(o instanceof Event_AM)) return false;
 
 		return true;
 	}

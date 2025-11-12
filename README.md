@@ -1,5 +1,5 @@
 # Slayers-RPG-Engine-Java v1.1
-Création d'un moteur de jeu 2D RPG inspiré du jeu vidéo Slayers Online (mais en offline pour le moment, il n'est pas en ligne)  
+Création d'un moteur de jeu 2D action-RPG inspiré du jeu vidéo Slayers Online (mais en offline pour le moment, il n'est pas en ligne)  
 Le moteur est entièrement conçu et codé en Java/awt from scratch (de 0) par Metroidzeta (Alain Barbier).  
 
 ## POUR COMPILER LE PROGRAMME
@@ -15,16 +15,17 @@ Puis exécuter :
 ## 🎮 CONTRÔLES
 
 **Flèches directionnelles ← ↑ ↓ → :** bouger (diagonale possible)  
-**Touche A :** voir les murs  
+**Touche A :** voir les murs   
 **Touche S :** attaquer (avec une hitBox visible)  
 **Touche ENTREE :** écrire un message (puis le poster)  
 **Touche ECHAP :** voir le menu (par défaut les statistiques)  
 **Touche F3 :** réécrire le message précédent  
+**Touche F5 :** changer de couleur de fenêtre  
 **Touche Q :** quitter le jeu (/!\ attention, cette touche quitte le jeu instantanément)  
 
 ## TÉLÉCHARGER LE JEU
 
-[Télécharger le jeu en entier ici (v1.0)](https://mega.nz/file/x502WZzR#IloQOk0HvEDsEo4spc6i51PacOZfSwZKukIrmSYijVA)
+[Télécharger le jeu en entier ici (v1.1)](https://mega.nz/file/Egk1BbjS#-QdySzVlArICSRd649M7qM0A5kideKQ-PyI0s_OYGk8)
 
 ## POUR LANCER LE JEU
 

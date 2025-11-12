@@ -34,7 +34,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * L'implémentation est thread-safe et optimise l'utilisation de la mémoire et du CPU
  * pour les musiques jouées. Une seule musique peut être active à la fois.
  */
-
 public final class Musique implements AutoCloseable {
 
 	private static final String DOSSIER = "musiques";

@@ -61,18 +61,30 @@ public final class ChargerCartes {
 		return cartes;
 	}
 
+	private static boolean isIntKey(JsonObject obj, String key) {
+		return obj.has(key)
+			&& obj.get(key).isJsonPrimitive()
+			&& obj.getAsJsonPrimitive(key).isNumber();
+	}
+
+	private static boolean isStringKey(JsonObject obj, String key) {
+		return obj.has(key)
+			&& obj.get(key).isJsonPrimitive()
+			&& obj.getAsJsonPrimitive(key).isString();
+	}
+
 	private static boolean[][] convertirMurs(int[][] source, int hauteur, int largeur) {
-		boolean[][] dest = new boolean[hauteur][largeur];
-		if (source == null) return dest;
+		boolean[][] dst = new boolean[hauteur][largeur];
+		if (source == null) return dst;
 
 		int h = Math.min(hauteur, source.length);
 		for (int i = 0; i < h; i++) {
 			int w = Math.min(largeur, source[i].length);
 			for (int j = 0; j < w; j++) {
-				dest[i][j] = (source[i][j] == 1);
+				dst[i][j] = (source[i][j] == 1);
 			}
 		}
-		return dest;
+		return dst;
 	}
 
 	private static boolean[][] lireMurs(String nomCarte, int hauteur, int largeur) {
@@ -116,8 +128,8 @@ public final class ChargerCartes {
 
 		try (FileReader reader = new FileReader(chemin.toFile())) { // try-with-ressources
 			JsonObject racine = JsonParser.parseReader(reader).getAsJsonObject();
-			
-			if (racine == null || !racine.has("largeur") || !racine.has("hauteur") || !racine.has("chipset") || !racine.has("musique")) {
+
+			if (racine == null || !isIntKey(racine, "largeur") || !isIntKey(racine, "hauteur") || !isStringKey(racine, "chipset") || !isStringKey(racine, "musique")) {
 				throw new IllegalArgumentException("[ERREUR] Fichier " + nomCarte + " incomplet ou invalide (champs manquants).");
 			}
 

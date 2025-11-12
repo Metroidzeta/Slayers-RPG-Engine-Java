@@ -16,9 +16,7 @@
       "x": 8,
       "y": 3,
       "events": [
-        {
-          "type": "TP", "xDst": 11, "yDst": 15, "carteDst": "Sarosa"
-        }
+        { "type": "TP", "xDst": 11, "yDst": 15, "carteDst": "Sarosa" }
       ]
     }
   ]

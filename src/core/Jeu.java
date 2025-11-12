@@ -309,7 +309,11 @@ public final class Jeu {
 			if (eventsActuels == null) {
 				//afficherRecap = 0;
 				menuVisible = !menuVisible;
-				if (menuVisible) heros.setFrameDeplacement(7);
+				if (menuVisible) {
+					heros.setEstEnTrainDEcrire(false);
+					viderMessage();
+					heros.setFrameDeplacement(7);	
+				}
 				heros.setEstBloque(!(heros.estBloque()));
 				controles.reset(Controles.Touche.ECHAP);
 			}
@@ -403,8 +407,8 @@ public final class Jeu {
 
 		// --- Variables de synchronisation ---
 		long nowNanos   = System.nanoTime();
-		long nextRender = nowNanos + NANOS_PER_RENDER;
-		long nextTick   = nowNanos + NANOS_PER_TICK;
+		long nextRender = nowNanos;
+		long nextTick   = nowNanos;
 
 		// --- Timers secondaires ---
 		long lastFiolesTime = nowNanos, lastMinute = nowNanos, lastSecond = nowNanos;
@@ -509,8 +513,8 @@ public final class Jeu {
 
 		// --- Variables de synchronisation ---
 		long now = System.currentTimeMillis();
-		double nextRender = (double)now + MILLIS_PER_RENDER;
-		double nextTick = (double)now + MILLIS_PER_TICK;
+		double nextRender = (double)now;
+		double nextTick = (double)now;
 
 		// --- Timers secondaires ---
 		long lastFiolesTime = now, lastMinute = now, lastSeconde = now;

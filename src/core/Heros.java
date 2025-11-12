@@ -182,10 +182,10 @@ public final class Heros implements Camera.CamLock {
 	public boolean deplacer(Directions d) {
 		tempHitBox.setLocation(position.x(), position.y());
 		switch (d) {
-			case HAUT -> tempHitBox.y -= (int)Config.DEPLACEMENT_JOUEUR;
-			case BAS -> tempHitBox.y += (int)Config.DEPLACEMENT_JOUEUR;
-			case GAUCHE -> tempHitBox.x -= (int)Config.DEPLACEMENT_JOUEUR;
-			case DROITE -> tempHitBox.x += (int)Config.DEPLACEMENT_JOUEUR;
+			case HAUT -> tempHitBox.y -= (int) Config.DEPLACEMENT_JOUEUR;
+			case BAS -> tempHitBox.y += (int) Config.DEPLACEMENT_JOUEUR;
+			case GAUCHE -> tempHitBox.x -= (int) Config.DEPLACEMENT_JOUEUR;
+			case DROITE -> tempHitBox.x += (int) Config.DEPLACEMENT_JOUEUR;
 		}
 
 		boolean changerDirection = false;
@@ -201,7 +201,7 @@ public final class Heros implements Camera.CamLock {
 
 			modifierPosition(tempHitBox.x, tempHitBox.y);
 			incrementFrameDeplacement();
-			//System.out.printf("%s s'est deplacé vers %-6s : (%d,%d)\n", nom, direction, getXCase(), getYCase());
+			System.out.printf("%s s'est deplacé vers %-6s : (%d,%d)\n", nom, direction, getXCase(), getYCase());
 			return true;
 		}
 		return changerDirection;

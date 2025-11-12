@@ -30,15 +30,10 @@ public class Fenetre extends JFrame {
 	private int REAL_HEIGHT;
 	private Canvas canvas;
 
-	static {
-		// --- VSync ---
-		System.setProperty("sun.java2d.vsync", "true");
-	}
-
 	public Fenetre(int largeur, int hauteur, Controles controles) {
 		configureFenetre(largeur, hauteur);
 
-		EventQueue.invokeLater(() -> canvas.createBufferStrategy(2)); // important : créer le BufferStrategy *après* que la fenêtre soit visible
+		EventQueue.invokeLater(() -> canvas.createBufferStrategy(3)); // important : créer le BufferStrategy *après* que la fenêtre soit visible
 		addKeyListener(controles); // gestion des entrées clavier
 	}
 

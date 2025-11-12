@@ -110,7 +110,7 @@ public final class Carte {
 		final int x1 = Math.min(largeur, (rect.x + rect.width - 1) / tailleCases + 1);
 		final int y0 = Math.max(0, rect.y / tailleCases);
 		final int y1 = Math.min(hauteur, (rect.y + rect.height - 1) / tailleCases + 1);
-		if (Config.DEBUG_MODE) System.out.printf("x0: %d, y0: %d, x1: %d, y1: %d%n", x0, y0, x1, y1);
+		if (Config.DEBUG_MODE) System.out.printf("x0: %d, x1: %d, y0: %d, y1: %d%n", x0, x1, y0, y1);
 
 		for (int i = y0; i < y1; i++) {
 			for (int j = x0; j < x1; j++) {

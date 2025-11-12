@@ -38,10 +38,12 @@ public final class ChargerEvents {
 
 	private ChargerEvents() { throw new AssertionError("La classe ChargerEvents ne doit pas être instanciée."); } // Empêche toute instanciation
 
+	/** Structure de données pour un event **/
 	private record EventData(String nomCarte, int xCase, int yCase, Event event) {}
 
 	private static final String DOSSIER = "cartes";
 
+	/** Méthodes static **/
 	private static List<EventData> getEvents(Jeu jeu) {
 		final List<EventData> events = new ArrayList<>();
 		try {
@@ -61,27 +63,44 @@ public final class ChargerEvents {
 		return (index > 0) ? nomFichier.substring(0, index) : nomFichier;
 	}
 
+	private static boolean isIntKey(JsonObject obj, String key) {
+		return obj.has(key)
+			&& obj.get(key).isJsonPrimitive()
+			&& obj.getAsJsonPrimitive(key).isNumber();
+	}
+
+	private static boolean isStringKey(JsonObject obj, String key) {
+		return obj.has(key)
+			&& obj.get(key).isJsonPrimitive()
+			&& obj.getAsJsonPrimitive(key).isString();
+	}
+
+	private static boolean isArrayKey(JsonObject obj, String key) {
+		return obj.has(key)
+			&& obj.get(key).isJsonArray();
+	}
+
 	private static void lireFichierJSON(Path chemin, Jeu jeu, List<EventData> events) {
 		try (FileReader reader = new FileReader(chemin.toFile())) { // try-with-ressources
 			JsonObject racine = JsonParser.parseReader(reader).getAsJsonObject();
 			JsonArray ensemblesEvents = racine.getAsJsonArray("ensemblesEvents");
-			if (ensemblesEvents == null) return;
+			if (ensemblesEvents == null || ensemblesEvents.isEmpty()) return;
 
 			String nomCarte = extraireNomCarte(chemin);
 			for (JsonElement blocElem : ensemblesEvents) {
 				JsonObject bloc = blocElem.getAsJsonObject();
-				if (!bloc.has("x") || !bloc.has("y") || !bloc.has("events")) {
+				if (!isIntKey(bloc, "x") || !isIntKey(bloc, "y") || !isArrayKey(bloc, "events")) {
 					System.err.println("[ERREUR] Bloc d'événement incomplet ignoré dans " + chemin.getFileName());
 					continue;
 				}
 				int xCase = bloc.get("x").getAsInt();
 				int yCase = bloc.get("y").getAsInt();
 				JsonArray arr = bloc.getAsJsonArray("events");
-				if (arr == null) continue;
+				if (arr == null || arr.isEmpty()) continue;
 
 				for (JsonElement evElem : arr) {
 					JsonObject ev = evElem.getAsJsonObject();
-					if (!ev.has("type")) {
+					if (!isStringKey(ev, "type")) {
 						System.err.println("[ERREUR] Événement sans type ignoré (" + chemin.getFileName() + " [" + xCase + "," + yCase + "])");
 						continue;
 					}
@@ -89,7 +108,7 @@ public final class ChargerEvents {
 					String type = ev.get("type").getAsString();
 					switch (type) {
 						case "MSG" -> {
-							if (!ev.has("texte")) {
+							if (!isStringKey(ev, "texte")) {
 								System.err.println("[AVERTISSEMENT] MSG sans texte ignoré dans " + chemin.getFileName());
 								continue;
 							}
@@ -97,17 +116,17 @@ public final class ChargerEvents {
 							events.add(new EventData(nomCarte, xCase, yCase, new Event_MSG(texte)));
 						}
 						case "TP" -> {
-							if (!ev.has("xDst") || !ev.has("yDst") || !ev.has("carteDst")) {
+							if (!isIntKey(ev, "xDst") || !isIntKey(ev, "yDst") || !isStringKey(ev, "carteDst")) {
 								System.err.println("[AVERTISSEMENT] TP incomplet ignoré dans " + chemin.getFileName());
 								continue;
 							}
-							int xDst = ev.get("xDst").getAsInt();
-							int yDst = ev.get("yDst").getAsInt();
-							String carteDst = ev.get("carteDst").getAsString();
-							events.add(new EventData(nomCarte, xCase, yCase, new Event_TP(xDst, yDst, jeu.getCarte(carteDst))));
+							int xCaseDst = ev.get("xDst").getAsInt();
+							int yCaseDst = ev.get("yDst").getAsInt();
+							String nomCarteDst = ev.get("carteDst").getAsString();
+							events.add(new EventData(nomCarte, xCase, yCase, new Event_TP(xCaseDst, yCaseDst, jeu.getCarte(nomCarteDst))));
 						}
 						case "JouerMusique" -> {
-							if (!ev.has("nom")) {
+							if (!isStringKey(ev, "nom")) {
 								System.err.println("[AVERTISSEMENT] JouerMusique sans nom de musique ignoré dans " + chemin.getFileName());
 								continue;
 							}
@@ -116,7 +135,7 @@ public final class ChargerEvents {
 						}
 						case "ArretMusique" -> events.add(new EventData(nomCarte, xCase, yCase, new Event_AM()));
 						case "PV" -> {
-							if (!ev.has("valeur")) {
+							if (!isIntKey(ev, "valeur")) {
 								System.err.println("[AVERTISSEMENT] modif PV sans valeur ignoré dans " + chemin.getFileName());
 								continue;
 							}
@@ -124,7 +143,7 @@ public final class ChargerEvents {
 							events.add(new EventData(nomCarte, xCase, yCase, new Event_ModifPV(val)));
 						}
 						case "PM" -> {
-							if (!ev.has("valeur")) {
+							if (!isIntKey(ev, "valeur")) {
 								System.err.println("[AVERTISSEMENT] modif PM sans valeur ignoré dans " + chemin.getFileName());
 								continue;
 							}

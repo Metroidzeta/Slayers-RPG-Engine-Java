@@ -23,23 +23,23 @@ import java.util.Objects;
 public final class Jauge {
 	private int valeur, max; // valeur actuelle / valeur maximale
 
-	public Jauge(int valeurInitiale, int max) {
+	public Jauge(int valeur, int max) {
 		if (max < 1) throw new IllegalArgumentException("Le max < 1");
-		if (valeurInitiale < 0 || valeurInitiale > max) throw new IllegalArgumentException("La valeur initiale < 0 ou > " + max);
-		this.valeur = valeurInitiale;
+		if (valeur < 0 || valeur > max) throw new IllegalArgumentException("La valeur initiale < 0 ou > " + max);
+		this.valeur = valeur;
 		this.max = max;
 	}
 
 	/** Getters **/
 	public int getValeur() { return valeur; }
 	public int getMax() { return max; }
-	public double getRatio() { return (double)valeur / max; }
+	public double getRatio() { return (double) valeur / max; }
 
 	/** Setters **/
 	public void setMax(int nouvMax) {
 		if (nouvMax < 1) throw new IllegalArgumentException("Le nouveau max est < 1");
 		max = nouvMax;
-		if (valeur > max) valeur = max; // ajuste la valeur si max inférieur
+		valeur = Math.min(valeur, max); // ajuste automatiquement si valeur > max
 	}
 	public void setValeur(int nouvValeur) { valeur = Math.max(0, Math.min(nouvValeur, max)); } // entre 0 et max
 
